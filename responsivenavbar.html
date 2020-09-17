@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="rspnavbar.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">LearnWebdesign</a>
+		<div class="toggle-menu active"></div>
+		<nav>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">WebDesign</a></li>
+			<li><a href="#">WebDevelopment</a></li>
+			<li><a href="#">Programing</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">Signup</a></li>
+		</ul>
+
+	</nav>
+	
+	<div class="clearfix"></div>
+	</header>
+
+	<script src="https://code.jquery.com/jquery-migrate-3.3.1.js" integrity="sha256-lGuUqJUPXJEMgQX/RRaM6mZkK6ono5i5bHuBME4qOCo=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$('document').ready(function(){
+			$('.toggle-menu').click(function(){
+				$('.toggle-menu').toggleClass('active');
+				$('nav').toggleClass('active');
+			});
+		});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeEditor</title>
+	<style type="text/css">
+		#html-code,#css-code,#js-code{
+			height:500px;
+			width:33%;
+			border:2px inset #C3DDDD;
+			margin-top:20px;
+			margin-left: 30px;
+			background-color:#000;
+			color:red;
+		}
+		#output{
+			height:500px;
+			width:33%;
+			border:2px inset #C3DDDD;
+			margin-top:20px;
+			margin-left: 30px;
+			color:red;
+		}
+		button{
+			font-size: 30px;
+			background-color: yellow;
+			color:green;
+			width:100px;
+			margin-left: 300px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+		<button onclick="run()" >Run</button>
+	<div class="editor">
+		<textarea id="html-code" placeholder="WriteYour HTMLCode"></textarea>
+		<textarea id="css-code" placeholder="WriteYour CSS Code"></textarea>
+		<textarea id="js-code" placeholder="WriteYourJsCode"></textarea>
+		<iframe id="output"></iframe>
+
+	</div>
+	<script type="text/javascript">
+		function run(){
+			let htmlCode = document.querySelector(".editor #html-code").value;
+			let cssCode= "<style>"+document.querySelector(".editor #css-code").value+"</style>";
+			let jsCode = document.querySelector(".editor #js-code").value;
+			let output = document.querySelector(".editor #output");
+			//console.log(htmlCode,cssCode,jsCode,output);
+			output.contentDocument.body.innerHTML = htmlCode+cssCode;
+			output.contentWindow.eval("jsCode");
+
+		}document.querySelector(".editor #html-code").addEventListener("onclick",run);
+		document.querySelector(".editor #css-code").addEventListener("onclick",run);
+		document.querySelector(".editor #js-code").addEventListener("onclick",run);
+	</script>
+	
+</body>
+</html>

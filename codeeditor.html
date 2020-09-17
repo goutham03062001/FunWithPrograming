@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		HTML Images
+	</title>
+	<link rel="stylesheet" type="text/css" href="codeeditor.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+	<style>
+		body{
+			font-family:Poppins,sans-serif;
+		
+			text-align: center;
+			font-size: 30px;
+		}
+		#for_images{
+		
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			font-size: 22px;
+
+		}
+		#for_images #code{
+			height: 300px;
+			width:800px;
+			font-size: 18px;
+
+		}
+
+@media(max-width:992px){
+	#heading{
+		color:yellow;
+		font-size: 30px;
+	}
+	#for_images{
+		
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			font-size: 22px;
+
+		}
+		#for_images #code{
+			width:100%;
+			font-size: 16px;
+			overflow-x:hidden;
+		}
+		#for_images #img{
+			width:300;
+			height: 250px;
+			line-height: 10px;
+			margin: 5px;
+
+		}
+}
+		
+	</style>
+</head>
+<body>
+	<h3 id="heading">How Import Images Into WebPage</h3>
+	<div id="for_images">
+	<div id="code" frameborder="0">
+		<!DOCTYPE html>
+		<span><</span>html<span>></span>
+		<span><</span>title&gt;You Should Title Herespan <span><</span>/title <span>></span>
+		<span><</span>body<span>></span>
+		<span><</span>img src="laptop_2.jpg" width="300px" height="250px"<span>></span>
+		<span><</span>/body<span>></span>
+		<span><</span>/html<span>></span>
+
+</div>
+<script type="text/javascript">
+	var a = ace.edit("code");
+		a.getSession().setMode("ace/mode/html");
+	a.setTheme("ace/theme/xcode");
+	a.getSession().setTabSize(3);
+	a.renderer.setShowGutter(true);
+
+</script>
+	<img src="laptop_2.jpg" id="img" width="300px" height="250px" title="image of dimensions 300x250px">
+	
+
+	</div>
+
+
+
+</body>
+</html>
